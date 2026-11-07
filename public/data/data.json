@@ -1,0 +1,122 @@
+[
+     {
+          "id": 1,
+          "name": "Virat Kohli",
+          "country": "India",
+          "image": "https://img.cricketworld.com/images/e-148508/india's-virat-kohli-celebrates-after-hitting-four-runs-to-reach-his-century-and-win-the-match.jpg",
+          "role": "Batsman",
+          "rating": 95,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1500
+     },
+     {
+          "id": 2,
+          "name": "Rohit Sharma",
+          "country": "India",
+          "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_800,q_50/lsci/db/PICTURES/CMS/397900/397962.6.jpg",
+          "role": "Batsman",
+          "rating": 92,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1500
+     },
+     {
+          "id": 3,
+          "name": "Babar Azam",
+          "country": "Pakistan",
+          "image": "https://e0.365dm.com/22/06/1600x900/skysports-babar-azam-pakistan_5798990.jpg?20220608211422",
+          "role": "Batsman",
+          "rating": 94,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1450
+     },
+     {
+          "id": 4,
+          "name": "Kane Williamson",
+          "country": "New Zealand",
+          "image": "https://e0.365dm.com/25/11/1600x900/skysports-kane-williamson-new-zealand_7069504.jpg?20251102120344",
+          "role": "Batsman",
+          "rating": 91,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1300
+     },
+     {
+          "id": 5,
+          "name": "Steve Smith",
+          "country": "Australia",
+          "image": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/374800/374889.6.jpg",
+          "role": "Batsman",
+          "rating": 93,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1350
+     },
+     {
+          "id": 6,
+          "name": "David Warner",
+          "country": "Australia",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_tspTw1avrx_ZIoTzCmTh0AoUcqTI9S8ZetPq6DkCeMrtP6ZfdVz_MGAi&s=10",
+          "role": "Batsman",
+          "rating": 90,
+          "battingStyle": "Left-Hand-Bat",
+          "price": 1250
+     },
+     {
+          "id": 7,
+          "name": "Shakib Al Hasan",
+          "country": "Bangladesh",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTijdIHreEIoLI-uVDSkiFNmlEjMc7xs6QLw466HXPXEp9z0o9O6TMFBIU&s=10",
+          "role": "All-Rounder",
+          "rating": 94,
+          "battingStyle": "Left-Hand-Bat",
+          "price": 1500
+     },
+     {
+          "id": 8,
+          "name": "Hardik Pandya",
+          "country": "India",
+          "image": "https://static.cricbuzz.com/a/img/v1/1080x608/i1/c1082464/hardik-is-uncertain-for-the-new-zealand-tour.jpg",
+          "role": "All-Rounder",
+          "rating": 89,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1200
+     },
+     {
+          "id": 9,
+          "name": "Ben Stokes",
+          "country": "England",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyODHW84psDaQMDFz94SPrKHeurRT3_T_gncJG7EuHqXNW0FJy6gzJDk8&s=10",
+          "role": "All-Rounder",
+          "rating": 92,
+          "battingStyle": "Left-Hand-Bat",
+          "price": 1400
+     },
+     {
+          "id": 10,
+          "name": "Jasprit Bumrah",
+          "country": "India",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGaD-H6ZSG4xlYjQXmP0aDfrYvATCqx7_18wsAsogCnbwY2gQz4qtjg_c&s=10",
+          "role": "Bowler",
+          "rating": 96,
+          "battingStyle": "Right-Hand-Bat",
+          "price": 1550
+     },
+     {
+          "id": 11,
+          "name": "Shaheen Afridi",
+          "country": "Pakistan",
+          "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_800,q_50/lsci/db/PICTURES/CMS/409800/409872.6.jpg",
+          "role": "Bowler",
+          "rating": 90,
+          "battingStyle": "Left-Hand-Bat",
+          "price": 1250
+     },
+     {
+          "id": 12,
+          "name": "Mustafizur Rahman",
+          "country": "Bangladesh",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbq0i_4XLxQLFLneJOkwGA1qZXJKwuStoFQjJXc9BQp70YdZOcGC0AwrN&s=10",
+          "role": "Bowler",
+          "rating": 88,
+          "battingStyle": "Left-Hand-Bat",
+          "price": 1100
+     }
+]
