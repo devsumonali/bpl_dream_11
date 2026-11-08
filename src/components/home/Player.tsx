@@ -60,6 +60,8 @@ const Player = ({ playerProps, setCoin, coin }: playerProps) => {
                               <SelectedPlayer
                                    selectedPlayers={selectedPlayers}
                                    setSelectedPlayers={setSelectedPlayers}
+                                   setCoin={setCoin}
+                                   coin={coin}
                               />
                          )}
                     </div>

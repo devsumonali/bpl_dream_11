@@ -1,4 +1,4 @@
-import { Suspense, type Dispatch, type SetStateAction } from 'react';
+import { Suspense, useState, type Dispatch, type SetStateAction } from 'react';
 import type { TPlayer } from '../../types/types';
 import Player from './Player';
 
@@ -13,7 +13,8 @@ export interface Tcoin {
      setCoin: Dispatch<SetStateAction<number>>;
 }
 const Players = ({ coin, setCoin }: Tcoin) => {
-     const playerProps = getPlayerProps();
+     const [playerProps] = useState(() => getPlayerProps());
+     // const playerProps = getPlayerProps();
      return (
           <div className='className=" w-full mx-auto max-w-330 mb-15'>
                <Suspense fallback={<h3>Loading Player...</h3>}>
