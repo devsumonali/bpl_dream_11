@@ -15,7 +15,7 @@ export interface Tcoin {
 const Players = ({ coin, setCoin }: Tcoin) => {
      const playerProps = getPlayerProps();
      return (
-          <div className='className=" w-full mx-auto max-w-330'>
+          <div className='className=" w-full mx-auto max-w-330 mb-15'>
                <Suspense fallback={<h3>Loading Player...</h3>}>
                     <Player playerProps={playerProps} coin={coin} setCoin={setCoin} />
                </Suspense>
