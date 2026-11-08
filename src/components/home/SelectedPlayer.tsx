@@ -12,6 +12,8 @@ const SelectedPlayer = ({ setSelectedPlayers, selectedPlayers }: TplayerProps) =
           setSelectedPlayers(selectedPlayers.filter((player) => player.id !== id));
           if (selectedPlayers) {
                toast.success('player successfuly remove');
+          } else {
+               toast.error('Failed to remove item');
           }
      };
 

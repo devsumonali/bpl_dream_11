@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 import type { TPlayer } from '../../types/types';
 import { toast } from 'react-toastify';
 
@@ -17,7 +17,7 @@ const AvailablePlayer = ({
      setSelectedPlayers,
      selectedPlayers,
 }: Tplayer) => {
-     const [isSelected, setIsSelected] = useState(false);
+     const isSelected = selectedPlayers.some((selectedPlayer) => selectedPlayer.id === player.id);
 
      const handleSelectedPlayer = () => {
           const newCoinPrice = coin - player.price;
@@ -27,7 +27,6 @@ const AvailablePlayer = ({
           }
 
           setCoin(newCoinPrice);
-          setIsSelected(true);
           setSelectedPlayers([...selectedPlayers, player]);
           toast.success(player.name + ' Purchase succesfuly');
      };
