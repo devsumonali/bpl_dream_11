@@ -1,24 +1,37 @@
 import { useState, type Dispatch, type SetStateAction } from 'react';
 import type { TPlayer } from '../../types/types';
+import { toast } from 'react-toastify';
 
 interface Tplayer {
      player: TPlayer;
      coin: number;
      setCoin: Dispatch<SetStateAction<number>>;
+     selectedPlayers: TPlayer[];
+     setSelectedPlayers: Dispatch<SetStateAction<TPlayer[]>>;
 }
 
-const AvailablePlayer = ({ player, coin, setCoin }: Tplayer) => {
+const AvailablePlayer = ({
+     player,
+     coin,
+     setCoin,
+     setSelectedPlayers,
+     selectedPlayers,
+}: Tplayer) => {
      const [isSelected, setIsSelected] = useState(false);
-     console.log(coin, setCoin);
 
      const handleSelectedPlayer = () => {
           setIsSelected(true);
           const newCoinPrice = coin - player.price;
           if (newCoinPrice >= 0) {
                setCoin(newCoinPrice);
+               setIsSelected(true);
+               toast.success(player.name + ' Purchase succesfuly');
           } else {
-               alert('Coin is not enough for purcharse');
+               toast.error('Coin is not enough for purcharse');
           }
+
+          //selected players
+          setSelectedPlayers([...selectedPlayers, player]);
      };
      return (
           <>
@@ -66,8 +79,14 @@ const AvailablePlayer = ({ player, coin, setCoin }: Tplayer) => {
                                    Price: ${player.price}
                               </span>
                               <button
-                                   onClick={() => handleSelectedPlayer()}
-                                   disabled={isSelected}
+                                   onClick={() => {
+                                        if (isSelected) {
+                                             toast.warning('Player already selected!');
+                                             return;
+                                        }
+                                        handleSelectedPlayer();
+                                   }}
+                                   // disabled={isSelected}
                                    className={`px-4 py-2 text-[14px] font-medium rounded-md border cursor-pointer transition-colors ${
                                         isSelected
                                              ? 'bg-[#DFFF00] text-black border-[#DFFF00]'

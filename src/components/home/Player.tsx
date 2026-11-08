@@ -1,7 +1,7 @@
 import { use, useState, type Dispatch, type SetStateAction } from 'react';
-import type { TPlayer } from '../../types/types';
 import AvailablePlayer from './AailablePlayer';
 import SelectedPlayer from './SelectedPlayer';
+import type { TPlayer } from '../../types/types';
 
 interface playerProps {
      playerProps: Promise<TPlayer[]>;
@@ -13,6 +13,7 @@ const Player = ({ playerProps, setCoin, coin }: playerProps) => {
      const players = use(playerProps);
 
      const [buttonType, setButtonType] = useState('available');
+     const [selectedPlayers, setSelectedPlayers] = useState<TPlayer[]>([]);
 
      const handleButtonType = (type: 'available' | 'selected') => {
           setButtonType(type);
@@ -37,7 +38,7 @@ const Player = ({ playerProps, setCoin, coin }: playerProps) => {
                                         onClick={() => handleButtonType('selected')}
                                         className={`${buttonType === 'selected' ? 'bg-[#DFFF00] text-black' : 'text-gray-600'}  cursor-pointer px-6 py-3 text-sm font-medium transition-colors`}
                                    >
-                                        Selected (0)
+                                        Selected {selectedPlayers.length}
                                    </button>
                               </div>
                          </div>
@@ -49,13 +50,13 @@ const Player = ({ playerProps, setCoin, coin }: playerProps) => {
                                              player={player}
                                              setCoin={setCoin}
                                              coin={coin}
+                                             selectedPlayers={selectedPlayers}
+                                             setSelectedPlayers={setSelectedPlayers}
                                         />
                                    ) : (
                                         <SelectedPlayer
-                                             key={player.id}
-                                             player={player}
-                                             setCoin={setCoin}
-                                             coin={coin}
+                                             selectedPlayers={selectedPlayers}
+                                             setSelectedPlayers={setSelectedPlayers}
                                         />
                                    ),
                               )}

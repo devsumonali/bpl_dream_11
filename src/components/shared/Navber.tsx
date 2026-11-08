@@ -34,12 +34,9 @@ const Navber = ({ coin }: { coin: number }) => {
                          >
                               Schedules
                          </a>
-                         <a
-                              href="#coin"
-                              className="inline-flex h-10 items-center gap-1.5 rounded-[9px] border border-[#e9e9e9] px-3 text-base font-semibold text-[#252525] shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors hover:border-[#f1bf31]"
-                         >
+                         <p className="inline-flex h-10 items-center gap-1.5 rounded-[9px] border border-[#e9e9e9] px-3 text-base font-semibold text-[#252525] shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors hover:border-[#f1bf31]">
                               {coin} Coin <span aria-hidden="true">🪙</span>
-                         </a>
+                         </p>
                     </div>
                </nav>
           </header>
