@@ -20,18 +20,16 @@ const AvailablePlayer = ({
      const [isSelected, setIsSelected] = useState(false);
 
      const handleSelectedPlayer = () => {
-          setIsSelected(true);
           const newCoinPrice = coin - player.price;
-          if (newCoinPrice >= 0) {
-               setCoin(newCoinPrice);
-               setIsSelected(true);
-               toast.success(player.name + ' Purchase succesfuly');
-          } else {
+          if (newCoinPrice < 0) {
                toast.error('Coin is not enough for purcharse');
+               return;
           }
 
-          //selected players
+          setCoin(newCoinPrice);
+          setIsSelected(true);
           setSelectedPlayers([...selectedPlayers, player]);
+          toast.success(player.name + ' Purchase succesfuly');
      };
      return (
           <>

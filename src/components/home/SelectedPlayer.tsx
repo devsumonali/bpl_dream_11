@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from 'react';
 import type { TPlayer } from '../../types/types';
+import { toast } from 'react-toastify';
 
 interface TplayerProps {
      selectedPlayers: TPlayer[];
@@ -9,10 +10,13 @@ interface TplayerProps {
 const SelectedPlayer = ({ setSelectedPlayers, selectedPlayers }: TplayerProps) => {
      const handleRemovePlayer = (id: string | number) => {
           setSelectedPlayers(selectedPlayers.filter((player) => player.id !== id));
+          if (selectedPlayers) {
+               toast.success('player successfuly remove');
+          }
      };
 
      return (
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 gap-5">
                {selectedPlayers.map((player) => (
                     <div
                          key={player.id || player.name}
