@@ -1,5 +1,5 @@
 import Hero from './components/home/Hero';
-import Newsletter from './components/home/NewsLetter';
+import Newsletter from './components/home/Newsletter';
 import Players from './components/home/Players';
 import Footer from './components/shared/Footer';
 import Navber from './components/shared/Navber';
